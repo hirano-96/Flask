@@ -1,0 +1,28 @@
+■階層参考
+https://qiita.com/shixukeizai/items/49f6dbccf5364e8fb499
+
+■アプリ参考
+https://qiita.com/Bashi50/items/30065e8f54f7e8038323
+
+https://qiita.com/Bashi50/items/9bb5ca4a519c17caf475
+
+    注意点
+    ・フォルダ、ファイル階層
+        実行されるファイル（views.py等）とtemplatesフォルダの階層を同じにしておかないと、
+        render_templateでHTMLを探しに行けないらしい。
+        〇　TEST_APP
+            ❘―views.py
+            ｜―templates
+            ｜　｜―HTML各種
+
+        ☓　TEST_APP
+            ｜―contorlloers
+            ｜　｜―views.py
+            ｜―templates
+            ｜　｜―HTML各種
+
+■さらに参考
+https://qiita.com/satour/items/e68afe3de6267cebcfea
+
+    JWT_SECRET_KEY　→　扱い注意。
+
