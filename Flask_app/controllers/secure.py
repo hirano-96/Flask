@@ -1,9 +1,10 @@
 
-from controllers import api
-from flask import Flask, jsonify, make_response, request
+from controllers import app,views
+from flask import Flask, jsonify, make_response, render_template, request, redirect, session
 from flask_jwt_extended import JWTManager, create_access_token, jwt_required
-from flask_restx import Resource
+from flask_restx import Api, Resource
 
+api = Api(app, doc='/documents/')
 
 # ユーザー作っとく
 users = [
@@ -37,7 +38,7 @@ class NoSecureController(Resource):
     def get(self):
         return make_response(jsonify({'message': 'This is NonSecure Endpoint.'}), 200)
 
-@api.route('/login')
+@app.route('/login', methods=['GET'])
 class LoginController(Resource):
     """認証用のクラス"""
     def post(self):

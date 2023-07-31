@@ -21,8 +21,11 @@ https://qiita.com/Bashi50/items/9bb5ca4a519c17caf475
             ｜―templates
             ｜　｜―HTML各種
 
-■さらに参考
+■2023.0104　JWT実装してみた参考
 https://qiita.com/satour/items/e68afe3de6267cebcfea
 
     JWT_SECRET_KEY　→　扱い注意。
+
+■2023.0105　ログイン画面を作りたい。
+https://hirahira.blog/pyhton-flask-login/#toc1
 

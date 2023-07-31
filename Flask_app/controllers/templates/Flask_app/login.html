@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+    {% extends "layout.html" %}
+    {% block head %}
+        {{ super() }}
+        <link rel="stylesheet" href="{{url_for('static', filename='css/sign-in.css')}}">
+    {% endblock %}
+
+    {% block content %}
+        <main class="form-signin m-auto w-100 text-center">
+            <form  action='/login' method='post' data-bitwarden-watching="1">
+                <h1 class='form-signin mb-3 fw-normal'>ログイン</h1>
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <p>{{ message }}</p>
+                    {% endfor %}
+                {% endif %}
+                {% endwith %}
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="user" name='username' placeholder="ユーザ名" required>
+                    <label for="floatingInput">ユーザ名</label>
+                </div>
+                <div class="form-floating">
+                    <input type="password" class="form-control" id="pass" name='password' placeholder="パスワード" required>
+                    <label for="floatingInput">パスワード</label>
+                </div>
+                <button type='submit' class='w-100 btn btn-primary'>ログイン</button>
+            </form>
+        </main>
+    {% endblock %}
+</html>
+

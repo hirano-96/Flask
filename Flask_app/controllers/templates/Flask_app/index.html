@@ -3,25 +3,63 @@
 {% extends "layout.html" %}
 
     {% block content %}
+    {{ super() }}
     <div class="container">
-        <h1>index.html表示してます</h1>
-        {{ insert_something }}
-        <p>{{ dict.insert_dictionary1 }}</p>
-        <p>{{ dict.insert_dictionary2 }}</p>
-
-        <h2>タイトル表示</h2>
-        <ul>
-        {% for title in dict.test_titles %}
-            <li>{{ title }}</li>
-            {% if title == 'タイトル1' %}
-                <li>{{ title }}</li>
-            {% elif title == 'タイトル2' %}
-                <li>見せられないよ</li>
-            {% else %}
-                <li>xxxx</li>
-            {% endif %}
-        {% endfor %}
-        </ul>
+        <h1 class='text-center'>Book List</h1>
+        <table class="table">
+            <tbody>
+                <tr>
+                <div class="row">
+                    <th class="col-lg-5 col-sm-5">タイトル1</th>
+                    <td class="col-lg-3 col-sm-3">作者1</td>
+                    <td>
+                        <div  class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <form  action='/detail' method='get' data-bitwarden-watching="1">
+                                <button type="submit" class="btn btn-outline-primary me-md-2" href={{ url_for('detail') }}>詳細</button>
+                            </form>
+                            <form  action='/update' method='get' data-bitwarden-watching="1">
+                                <button type="submit" class="btn btn-outline-primary" href={{ url_for('update') }}>編集</button>
+                            </form>
+                            <button type="submit" class="btn btn-outline-danger">削除</button>
+                        </div>
+                    </td>
+                </div>
+                </tr>
+                <div class="row">
+                    <th class="col-sm-5 col-sm-5">タイトル2</th>
+                    <td class="col-sm-3 col-sm-3">作者2</td>
+                    <td>
+                        <div  class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <form  action='/detail' method='get' data-bitwarden-watching="1">
+                                <button type="submit" class="btn btn-outline-primary me-md-2" href={{ url_for('detail') }}>詳細</button>
+                            </form>
+                            <form  action='/update' method='get' data-bitwarden-watching="1">
+                                <button type="submit" class="btn btn-outline-primary" href={{ url_for('update') }}>編集</button>
+                            </form>
+                            <button type="submit" class="btn btn-outline-danger">削除</button>
+                        </div>
+                    </td>
+                </div>
+                </tr>
+                <div class="row">
+                    <th class="col-lg-5 col-sm-5">タイトル3</th>
+                    <td class="col-lg-3 col-sm-3">作者3</td>
+                    <td>
+                        <div  class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <form  action='/detail' method='get' data-bitwarden-watching="1">
+                                <button type="submit" class="btn btn-outline-primary me-md-2" href={{ url_for('detail') }}>詳細</button>
+                            </form>
+                            <form  action='/update' method='get' data-bitwarden-watching="1">
+                                <button type="submit" class="btn btn-outline-primary" href={{ url_for('update') }}>編集</button>
+                            </form>
+                            <button type="submit" class="btn btn-outline-danger">削除</button>
+                        </div>
+                    </td>
+                </div>
+                </tr>
+            </tbody>
+        </table>
+        <button type="button" name="button" class="btn btn-primary btn-lg mx-auto d-block soushin">データ登録</button>
     {% endblock %}
     </div>
 </html>

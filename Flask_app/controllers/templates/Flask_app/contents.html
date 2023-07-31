@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+    {% extends "layout.html" %}
+
+    {% block content %}
+    {{ super() }}
+    <div class="container">
+        <h1 class='text-center'>Update List</h1>
+        <table class="table text-center">
+            <tbody>
+                <tr>
+                <div class="row">
+                    <th class="col-lg-2 col-sm-2">タイトル1</th>
+                    <td class="col-lg-2 col-sm-2">作者1</td>
+                    <td class="col-lg-2 col-sm-2"><button type="button" class="btn btn-outline-primary">編集</button></td>
+                    <td class="col-lg-2 col-sm-2"><button type="button" class="btn btn-outline-danger">削除</button></td>
+                </div>
+                </tr>
+                <div class="row">
+                    <th class="col-lg-2 col-sm-2">タイトル2</th>
+                    <td class="col-lg-8 col-sm-8">作者2</td>
+                    <td class="col-lg-1 col-sm-1"><button type="button" class="btn btn-outline-primary">編集</button></td>
+                    <td class="col-lg-1 col-sm-1"><button type="button" class="btn btn-outline-danger">削除</button></td>
+                </div>
+                </tr>
+                <div class="row">
+                    <th class="col-lg-2 col-sm-2">タイトル3</th>
+                    <td class="col-lg-8 col-sm-8">作者3</td>
+                    <td class="col-lg-1 col-sm-1"><button type="button" class="btn btn-outline-primary">編集</button></td>
+                    <td class="col-lg-1 col-sm-1"><button type="button" class="btn btn-outline-danger">削除</button></td>
+                </div>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <button type="button" name="button" class="btn btn-primary btn-lg mx-auto d-block soushin">データ登録</button>
+    {% endblock %}
+</html>

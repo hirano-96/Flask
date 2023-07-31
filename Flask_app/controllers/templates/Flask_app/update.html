@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+    {% extends "layout.html" %}
+
+    {% block content %}
+    {{ super() }}
+    <div class="container">
+        <h1 class='text-center'>Update Detail</h1>
+        <table class="table text-center">
+            <tbody>
+                <tr>
+                <div class="row">
+                    <th class="col-lg-2 col-sm-2 text-center">タイトル1</th>
+                </div>
+                </tr>
+                <div class="row">
+                    <th class="col-lg-2 col-sm-2">作者</th>
+                    <td class="col-lg-8 col-sm-8">作者1</td>
+                </div>
+                </tr>
+                <div class="row">
+                    <th class="col-lg-2 col-sm-2">日付</th>
+                    <td>XXXX</td>
+                    <td >~</td>
+                    <td>XXXX</td>
+                </tr>
+                <div class="row">
+                    <th class="col-lg-2 col-sm-2">感想</th>
+                    <td class="col-lg-8 col-sm-8">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+                </div>
+            </tbody>
+        </table>
+    </div>
+    <button type="button" name="button" class="btn btn-primary btn-lg mx-auto d-block soushin">登録</button>
+    {% endblock %}
+</html>
